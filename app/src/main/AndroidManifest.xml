@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    package="com.example.lab_week_02_c">
 
     <application
         android:allowBackup="true"
@@ -12,14 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LAB_WEEK_02_C">
 
-        <activity
-            android:name=".SingleTopActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".StandardActivity"
-            android:exported="false" />
-
+        <!-- MainActivity sebagai entry point -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -28,6 +21,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Standard Activity dengan launchMode=standard -->
+        <activity
+            android:name=".StandardActivity"
+            android:launchMode="standard" />
+
+        <!-- SingleTop Activity dengan launchMode=singleTop -->
+        <activity
+            android:name=".SingleTopActivity"
+            android:launchMode="singleTop" />
 
     </application>
 
